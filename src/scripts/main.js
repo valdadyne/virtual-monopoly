@@ -1,5 +1,11 @@
-const sayHello = (message) => {
-    alert(message);
+/* eslint-disable no-console */
+
+const game = () => {
+    // set the screen to fullscreen
+    window.document.addEventListener('DOMContentLoaded', () => {
+        document.documentElement.requestFullscreen();
+        screen.orientation.lock("portrait-primary");
+    }, false);
 }
 
-export default sayHello;
+export default game;
