@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -28,6 +29,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new CopyPlugin([]),
         new HtmlWebpackPlugin({
             title: 'Virtual Monopoly',
             template: './src/app.html',
@@ -37,6 +39,10 @@ module.exports = {
                 collapseWhitespace: true
             },
             exclude: '/node_modules'
-        })
+        }, {
+            title: 'Virtual Monopoly',
+            template: './src/templates/classic',
+        }
+        )
     ]
 }
