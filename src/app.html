@@ -1,18 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><% htmlWebpackPlugin.options.title %></title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="app-wrapper">
-        <div class="dashboard">
-            <div>Player 1</div>
-        </div>
-        <div class="board">the board goes here</div>
-        <div class="log"></div>
-    </div>    
+        <section id="board">
+            <div class="grid">
+                <!-- top-row -->
+                <div class="row row-top">
+                    <div class="square square-big">
+                        <div class="corner corner-top-left">Free Parking</div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-red"></div>
+                            <div class="header">Kentucky Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-chance">
+                            <div class="header header-none">Chance</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-red"></div>
+                            <div class="header">Indiana Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-red"></div>
+                            <div class="header">Illinois Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-railroad">
+                            <div class="header">B & O Railroad</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-yellow"></div>
+                            <div class="header">Atlantic Avenue </div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-yellow"></div>
+                            <div class="header">Ventor Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-utility">
+                            <div class="header">Water Works</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-yellow"></div>
+                            <div class="header">Marvin Gardens</div>
+                        </div>
+                    </div>
+                    <div class="square square-big">
+                        <div class="corner corner-top-right"> Go To Jail </div>
+                    </div>
+                </div>
+
+                <!-- right column -->
+                <div class="column column-right">
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-green"></div>
+                            <div class="header">Pacific Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-green"></div>
+                            <div class="header">North Carolina Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-community">
+                            <div class="header">Community Chest</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-green"></div>
+                            <div class="header">Pennsylvania Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-utility">
+                            <div class="header">Short Line</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-chance">
+                            <div class="header">Chance </div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-darkblue"></div>
+                            <div class="header">Park Place</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-tax">
+                            <div class="header">Luxury Task</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-darkblue"></div>
+                            <div class="header">Tennessee Avenue </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- middle column -->
+                <div class="column column-middle">
+                    <h1>Monopoly</h1>
+                </div>
+
+                <!-- left column -->
+                <div class="column column-left">
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-orange"></div>
+                            <div class="header">New York Avenue </div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-orange"></div>
+                            <div class="header">Tennessee Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-community">
+                            <div class="header">Community Chest</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-orange"></div>
+                            <div class="header">St. James Place</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-railroad">
+                            <div class="header">Pennsylvania Railroad</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-purple"></div>
+                            <div class="header">Virginia Avenue </div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-purple"></div>
+                            <div class="header">States Avenue </div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-utility">
+                            <div class="header">Electric Company</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-purple"></div>
+                            <div class="header">St. Charles Place</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bottom row -->
+                <div class="row row-bottom">
+                    <div class="square square-big">
+                        <div class="corner corner-bottom-left"> In Jail </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-lightblue"></div>
+                            <div class="header">Connecticut Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-lightblue"></div>
+                            <div class="header">Vermont Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-chance">
+                            <div class="header">Chance</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-lightblue"></div>
+                            <div class="header">Oriental Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-railroad">
+                            <div class="header">Reading Railroad</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-utility">
+                            <div class="header">Income Tax</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-brown"></div>
+                            <div class="header">Baltic Avenue</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-community">
+                            <div class="header">Community Chest</div>
+                        </div>
+                    </div>
+                    <div class="square square-small">
+                        <div class="regular regular-property">
+                            <div class="bar bar-brown"></div>
+                            <div class="header">Mediterranean Gardens</div>
+                        </div>
+                    </div>
+                    <div class="square square-big">
+                        <div class="corner corner-bottom-right"> Go Collect 2000 </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
