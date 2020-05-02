@@ -1,0 +1,192 @@
+#board {
+    height: max-content;
+    width: max-content;
+    margin: 1rem auto;
+    background: $classic-bg;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-rows: 1fr 9fr 1fr;
+        grid-template-areas:
+            'topRow topRow topRow'
+            'centerLeft centerMiddle centerRight'
+            'bottomRow bottomRow bottomRow'
+        ;
+
+        .square {
+            height: 65px;
+            position: relative;
+            outline: 1px solid #000;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .corner {
+                word-wrap: break-word;
+                font-size: calc(14px + 0.25vmin);
+            }
+
+            .regular {
+                font-weight: 400;
+                font-size: calc(8px + 0.25vmin);
+
+                .header {
+                    margin: 2rem auto;
+                    line-height: 1.25;
+                    text-align: center;
+                    word-wrap: break-word;
+                }
+            }
+        }
+
+        .bar {
+            position: absolute;
+            content: ' ';
+
+            &.bar-red {
+                background: $classic-red;
+            }
+
+            &.bar-yellow {
+                background: $classic-yellow;
+            }
+
+            &.bar-green {
+                background: $classic-green;
+            }
+
+            &.bar-darkblue {
+                background: $classic-darkblue;
+            }
+
+            &.bar-lightblue {
+                background: $classic-lightBlue;
+            }
+
+            &.bar-orange {
+                background: $classic-orange;
+            }
+
+            &.bar-purple {
+                background: $classic-purple;
+            }
+
+            &.bar-brown {
+                background: $classic-brown;
+            }
+        }
+
+        .row {
+            display: flex;
+
+            .bar {
+                left: 1px;
+                right: 1px;
+                height: 1rem;
+            }
+
+            .regular {
+                width: 85%;
+            }
+
+            .square-small {
+                width: calc(80vmin / 9);
+            }
+
+            .square-big {
+                width: 150px;
+            }
+
+            &.row-top {
+                grid-area: topRow;
+
+                .bar {
+                    bottom: 0;
+                }
+
+                .header {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &.row-bottom {
+                grid-area: bottomRow;
+
+                .bar {
+                    top: 0;
+                }
+
+            }
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+
+            .bar {
+                height: calc(100% - 2px);
+                width: 1rem;
+            }
+
+            .header {
+                width: 60px;
+            }
+
+            &.column-left {
+                grid-area: centerLeft;
+
+                .bar {
+                    right: 0;
+                    top: 1px;
+                    bottom: 1px;
+                }
+
+                .header {
+                    transform: rotate(90deg);
+                }
+            }
+
+            &.column-middle {
+                grid-area: centerMiddle;
+                outline: 1px solid #000;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.column-right {
+                grid-area: centerRight;
+
+                .bar {
+                    left: 0;
+                    top: 1px;
+                    bottom: 1px;
+                }
+
+                .header {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 424px) {
+    #board {
+        .grid {
+
+            // hide board on small screens
+            .row-top,
+            .row-bottom,
+            .column-left,
+            .column-right {
+                display: none;
+            }
+        }
+    }
+}
